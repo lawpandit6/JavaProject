@@ -1,0 +1,5 @@
+package in.law.dto;
+
+public class Register {
+
+}

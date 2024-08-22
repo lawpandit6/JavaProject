@@ -1,0 +1,5 @@
+package in.law.util;
+
+public class ConnectionFactory {
+
+}

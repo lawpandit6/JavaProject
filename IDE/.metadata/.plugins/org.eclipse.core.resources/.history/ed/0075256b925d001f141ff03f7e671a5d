@@ -1,0 +1,8 @@
+package in.law.dao;
+
+public class UserDAO {
+
+	public static void login() {
+		
+	}
+}

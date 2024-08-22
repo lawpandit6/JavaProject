@@ -1,0 +1,9 @@
+127.0.0.1 - - [15/Aug/2024:00:26:01 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Aug/2024:00:26:04 +0530] "GET /BookOptServlet/ HTTP/1.1" 200 602
+0:0:0:0:0:0:0:1 - - [15/Aug/2024:00:26:27 +0530] "GET /BookOptServlet/insert?bid=5&bname=SHIV+PURAN&bprice=500 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Aug/2024:00:43:18 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Aug/2024:00:43:20 +0530] "GET /BookOptServlet/insert HTTP/1.1" 200 -
+127.0.0.1 - - [15/Aug/2024:00:48:32 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Aug/2024:00:48:35 +0530] "GET /BookOptServlet/ HTTP/1.1" 200 602
+0:0:0:0:0:0:0:1 - - [15/Aug/2024:00:48:55 +0530] "GET /BookOptServlet/insert?bid=5&bname=SHIV+PURAN&bprice=500 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Aug/2024:20:05:20 +0530] "GET / HTTP/1.1" 404 751

@@ -1,0 +1,57 @@
+package in.book;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/insert")
+public class BookInsert extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+		String bid = req.getParameter("bid");
+		String bname = req.getParameter("bname");
+		String bprice = req.getParameter("bprice");
+		
+		System.out.println(bid);
+		System.out.println(bname);
+		System.out.println(bprice);
+		
+		final String url = "jdbc:mysql://localhost:3306/jdbc";
+		final String name = "root";
+		final String pwd = "AshokIT@123";
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, name, pwd);
+			PreparedStatement pstmt = con.prepareStatement("INSERT INTO BOOK VALUES (? , ? ,?)");
+			pstmt.setInt(1, Integer.parseInt(bid));
+			pstmt.setString(2, bname);
+			pstmt.setInt(3, Integer.parseInt(bprice));
+
+			int record = pstmt.executeUpdate();
+
+			if (record > 0) {
+				res.getWriter().append("<h3>Record Inserted into Book Table</h3>");
+			} else {
+				res.getWriter().append("<h3>Record not inserted</h3>");
+			}
+			
+			con.close();
+
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

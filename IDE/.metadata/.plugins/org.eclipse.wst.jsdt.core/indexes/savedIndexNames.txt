@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\NOTES\AshokIt\IDE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2193467710.index
+3219546360.index
+3513304110.index
+1426278319.index
+578630793.index
+4069169304.index
+3620317941.index
+3412301970.index
